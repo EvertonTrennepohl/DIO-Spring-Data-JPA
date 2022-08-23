@@ -34,7 +34,7 @@ public class Aluno {
   
   private String nome;
   
-  @Column(unique = true)
+  @Column(unique = true , updatable = false)
   private String cpf;
 
   private String bairro;

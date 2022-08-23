@@ -1,4 +1,4 @@
-package me.dio.academia.digital.entity.form;
+package me.dio.academia.digital.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,8 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class MatriculaForm {
-	
-  private Long alunoId;
+public class AvaliacaoFisicaUpdateDTO {
 
+  private double peso;
+
+  private double altura;
 }

@@ -5,9 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import me.dio.academia.digital.dto.AvaliacaoFisicaDTO;
+import me.dio.academia.digital.dto.AvaliacaoFisicaUpdateDTO;
 import me.dio.academia.digital.entity.AvaliacaoFisica;
-import me.dio.academia.digital.entity.form.AvaliacaoFisicaForm;
-import me.dio.academia.digital.entity.form.AvaliacaoFisicaUpdateForm;
 import me.dio.academia.digital.repository.AlunoRepository;
 import me.dio.academia.digital.repository.AvaliacaoFisicaRepository;
 import me.dio.academia.digital.service.IAvaliacaoFisicaService;
@@ -22,7 +22,7 @@ public class AvaliacaoFisicaServiceImpl implements IAvaliacaoFisicaService{
 	private AlunoRepository alunoRepository;
 	
 	@Override
-	public AvaliacaoFisica create(AvaliacaoFisicaForm form) {
+	public AvaliacaoFisica create(AvaliacaoFisicaDTO form) {
 		
 		AvaliacaoFisica avaliacaoFisica = new AvaliacaoFisica();
 		avaliacaoFisica.setAluno(alunoRepository.findById(form.getAlunoId()).get());
@@ -44,7 +44,7 @@ public class AvaliacaoFisicaServiceImpl implements IAvaliacaoFisicaService{
 	}
 
 	@Override
-	public AvaliacaoFisica update(Long id, AvaliacaoFisicaUpdateForm formUpdate) {
+	public AvaliacaoFisica update(Long id, AvaliacaoFisicaUpdateDTO formUpdate) {
 		// TODO Auto-generated method stub
 		return null;
 	}

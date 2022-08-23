@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import me.dio.academia.digital.dto.AvaliacaoFisicaDTO;
 import me.dio.academia.digital.entity.AvaliacaoFisica;
-import me.dio.academia.digital.entity.form.AvaliacaoFisicaForm;
 import me.dio.academia.digital.service.impl.AvaliacaoFisicaServiceImpl;
 
 @RestController
@@ -18,7 +18,7 @@ public class AvaliacaoFisicaController {
 	private AvaliacaoFisicaServiceImpl avaliacaoService;
 	
 	@PostMapping
-	public AvaliacaoFisica create(@RequestBody AvaliacaoFisicaForm form) {
+	public AvaliacaoFisica create(@RequestBody AvaliacaoFisicaDTO form) {
 		return avaliacaoService.create(form);
 	}
 	

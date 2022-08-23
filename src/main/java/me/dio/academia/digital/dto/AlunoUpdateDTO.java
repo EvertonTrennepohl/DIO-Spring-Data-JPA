@@ -1,4 +1,4 @@
-package me.dio.academia.digital.entity.form;
+package me.dio.academia.digital.dto;
 
 import java.time.LocalDate;
 
@@ -9,11 +9,9 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class AlunoForm {
+public class AlunoUpdateDTO {
 
   private String nome;
-
-  private String cpf;
 
   private String bairro;
 
